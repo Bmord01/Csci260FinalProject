@@ -78,5 +78,19 @@ plt.plot(xSLow[:2],ySLow[:2],'g')
 plt.plot(xSAfter[:2],ySAfter[:2],'g')
 plt.savefig("TREND.png")
 
+#Start Distance formula calculations
+ASlopToLow = (minA-ATT.iloc[0]["Open"])/minADate
+VSlopToLow = (minV-VERIZON.iloc[0]["Open"])/minVDate
+SSlopToLow = (minS-SPRINT.iloc[0]["Open"])/minSDate
+ASlopToHigh = (ATT.iloc[4526]["Open"] - ATT.iloc[minADate]["Open"])/(4526-minADate)
+VSlopToHigh = (VERIZON.iloc[4526]["Open"] - VERIZON.iloc[minVDate]["Open"])/(4526-minVDate)
+SSlopToHigh = (SPRINT.iloc[4526]["Open"] - SPRINT.iloc[minSDate]["Open"])/(4526-minADate)
+ASlopToOver = (ATT.iloc[4526]["Open"] - ATT.iloc[0]["Open"])/(4526-minADate)
+VSlopToOver = (VERIZON.iloc[4526]["Open"] - VERIZON.iloc[0]["Open"])/(4526-minVDate)
+SSlopToOver = (SPRINT.iloc[4526]["Open"] - SPRINT.iloc[0]["Open"])/(4526-minADate)
+
+print(ASlopToLow,VSlopToLow,SSlopToLow)
+print(ASlopToHigh,VSlopToHigh,SSlopToHigh)
+print(ASlopToOver,VSlopToOver,SSlopToOver)
 
 
