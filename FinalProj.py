@@ -64,11 +64,12 @@ xATTAfter = [minADate,4526]
 xVAfter = [minVDate,4526]
 xSAfter = [ minSDate,4526]
 
-plt.plot(xA[0:2],yA[0:2])
-plt.plot(xA[0:2],yV[0:2])
-plt.plot(xA[0:2],yS[0:2])
+plt.plot(xA[0:2],yA[0:2],'b')
+plt.plot(xA[0:2],yV[0:2],'m')
+plt.plot(xA[0:2],yS[0:2],'g')
 plt.savefig("OverallTrend.png")
 plt.clf()
+plt.ylim([0,70])
 plt.plot(xATTLow[0:2],yALow[0:2],'b')
 plt.plot(xATTAfter[0:2],yAAfter[:2],'b')
 plt.plot(xVLow[:2],yVLow[:2],'m')
